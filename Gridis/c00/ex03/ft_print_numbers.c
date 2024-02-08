@@ -1,17 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Gridis <gridis72@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 22:30:53 by Gridis            #+#    #+#             */
-/*   Updated: 2024/02/08 22:36:22 by Gridis           ###   ########.fr       */
+/*   Created: 2024/02/08 23:17:32 by Gridis            #+#    #+#             */
+/*   Updated: 2024/02/08 23:20:13 by Gridis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_print_numbers(void)
 {
-	write(1, &c, 1);
+	int		i;
+	char	c;
+
+	i = 0;
+	while (i < 10)
+	{
+		c = '0' + i;
+		write(1, &c, 1);
+		i++;
+	}
 }
+/*int main()
+{
+	ft_print_numbers();
+}*/

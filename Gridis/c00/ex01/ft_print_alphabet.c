@@ -1,17 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Gridis <gridis72@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 22:30:53 by Gridis            #+#    #+#             */
-/*   Updated: 2024/02/08 22:36:22 by Gridis           ###   ########.fr       */
+/*   Created: 2024/02/08 22:37:48 by Gridis            #+#    #+#             */
+/*   Updated: 2024/02/08 22:59:38 by Gridis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_print_alphabet(void)
 {
-	write(1, &c, 1);
+	int		i;
+	char	c;
+
+	i = 0;
+	while (i < 26)
+	{
+		c = 'a' + i;
+		write(1, &c, 1);
+		i++;
+	}
 }
+/*int main()
+{
+	ft_print_alphabet();
+}*/
